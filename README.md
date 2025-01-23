@@ -24,7 +24,7 @@ You can check out the live demo of the app [here](#).
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/taskboard.git
+   git clone https://github.com/jerickdelarosa/taskboard.git
    ```
 
 2. Navigate into the project directory:
