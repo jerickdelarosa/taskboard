@@ -1,5 +1,6 @@
 {
-  "name": "kanban-board",
+  "name": "taskboard",
+  "homepage": "https://jerickdelarosa.github.io/taskboard/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
