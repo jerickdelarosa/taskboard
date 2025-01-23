@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# Taskboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Taskboard is a simple web app built with React and Vite that helps you manage tasks using a Kanban-style board. Perfect for organizing, prioritizing, and tracking tasks with a clean and intuitive interface.
 
-Currently, two official plugins are available:
+## Features
+- **Kanban Board**: Organize tasks in columns (e.g., To Do, In Progress, Done).
+- **Drag and Drop**: Easily move tasks between columns.
+- **Task Management**: Create, edit, and delete tasks.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+You can check out the live demo of the app [here](#).
 
-## Expanding the ESLint configuration
+## Screenshots
+![Taskboard Screenshot](#)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
+- Node.js (>= 14.x)
+- npm (>= 6.x)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Setup Instructions
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/taskboard.git
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Navigate into the project directory:
+   ```bash
+   cd taskboard
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Install the dependencies using npm:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+   The app will be available at [https://jerickdelarosa.github.io/taskboard]([http://localhost:5173](https://jerickdelarosa.github.io/taskboard)) by default.
+
+## Usage
+
+1. Add a new task by clicking the "Add Task" button in the desired column.
+2. Drag tasks between columns to update their status.
+3. Edit or delete tasks by clicking on them.
+
+## Contributing
+
+We welcome contributions! If you'd like to improve the app, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -am 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
