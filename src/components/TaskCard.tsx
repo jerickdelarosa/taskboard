@@ -69,7 +69,16 @@ function TaskCard(props: Props) {
         style={style}
         {...attributes}
         {...listeners}
-        className="bg-white px-4 py-2 h-auto min-h-[100px] items-center flex text-left rounded-xl hover:ring-1 hover:ring-inset hover:ring-slate-400 cursor-grab relative"
+        className="
+        bg-white px-4 py-2
+        h-auto
+        min-h-[120px]
+        items-start
+        flex flex-col
+        text-left rounded-xl
+        hover:ring-1 hover:ring-inset
+        hover:ring-slate-400
+        cursor-grab relative"
       >
         <textarea
           className="h-[90%] w-full resize-none rounded border-none bg-transparent focus:outline-none font-medium"
@@ -94,7 +103,16 @@ function TaskCard(props: Props) {
       style={style}
       {...attributes}
       {...listeners}
-      className="bg-white px-4 py-2 h-auto min-h-[100px] items-start flex flex-col text-left rounded-xl hover:ring-1 hover:ring-inset hover:ring-slate-400 cursor-grab relative task border border-slate-300"
+      className="
+      bg-white px-4 py-2
+      h-auto
+      items-start
+      flex flex-col
+      text-left rounded-xl
+      hover:ring-1 hover:ring-inset
+      hover:ring-slate-400
+      cursor-grab relative
+      task border border-slate-300"
       onMouseEnter={() => {
         setMouseIsOver(true)
       }}
@@ -113,7 +131,7 @@ function TaskCard(props: Props) {
           <option className="font-medium text-xs bg-white text-slate-600" value="high">High</option>
         </select> 
       
-      <p onClick={toggleEditMode} className="mt-2 mb-8 h-[90%] w-full overflow-y-auto overflow-x-hidden whitespace-pre-wrap font-medium">
+      <p onClick={toggleEditMode} className="mt-2 mb-4 h-[90%] w-full whitespace-pre-wrap font-medium">
         {task.content}
       </p>
       
@@ -121,7 +139,7 @@ function TaskCard(props: Props) {
         mouseIsOver && (
         <button
           onClick={() => deleteTask(task.id)}
-          className="stroke-slate-600 absolute right-4 bottom-4 bg-transparent rounded opacity-60 hover:opacity-100">
+          className="stroke-slate-600 absolute right-4 top-4 bg-transparent rounded opacity-60 hover:opacity-100">
           <TrashIcon />
         </button>)                                                
       }     

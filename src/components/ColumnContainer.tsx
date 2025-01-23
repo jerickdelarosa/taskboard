@@ -15,11 +15,10 @@ interface Props {
     createTask: (columnId: Id) => void;
     deleteTask: (taskId: Id) => void;
     updateTask: (taskId: Id, content: string, priority: 'low' | 'medium' | 'high') => void;
-    isFirstColumn: boolean;
 }
 
 function ColumnContainer(props: Props) {
-    const { column, tasks, deleteColumn, updateColumn, createTask, deleteTask, updateTask, isFirstColumn } = props;
+    const { column, tasks, deleteColumn, updateColumn, createTask, deleteTask, updateTask} = props;
 
     const tasksIds = useMemo(() => {
       return tasks.map(task => task.id)
@@ -53,8 +52,7 @@ function ColumnContainer(props: Props) {
                 border-dashed
                 border-slate-600
                 w-[350px]
-                h-[600px]
-                max-h-[600px]
+                h-[800px]
                 rounded-md
                 flex-col
               "></div>
@@ -67,8 +65,7 @@ function ColumnContainer(props: Props) {
       className="
       bg-columnBackgroundColor
       w-[350px]
-      h-[600px]
-      max-h-[600px]
+      h-[800px]
       rounded-md
       flex
       flex-col
@@ -144,7 +141,7 @@ function ColumnContainer(props: Props) {
 
 
       { /* Column Task Container */}
-      <div className='flex flex-grow flex-col gap-4 p-2 overflow-x-hidden overflow-y-auto'>
+      <div className='flex flex-grow flex-col gap-1 p-2 overflow-x-hidden overflow-y-auto'>
         <SortableContext items={tasksIds}>
           {tasks.map((task) => (
             <TaskCard key={task.id} task={task} deleteTask={deleteTask} updateTask={updateTask} />
@@ -154,14 +151,12 @@ function ColumnContainer(props: Props) {
 
 
       { /* Column Footer */}
-      {isFirstColumn && (
-        <button
+      <button
           className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-slate-600 active:bg-slate-600 active:text-white font-medium"
           onClick={() => createTask(column.id)}
         >
           <PlusIcon /> Add Task
         </button>
-      )}
     </div>
   )
 }

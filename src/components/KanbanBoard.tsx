@@ -98,7 +98,7 @@ function KanbanBoard() {
         onDragEnd={onDragEnd}
         onDragOver={onDragOver}
       >
-        <div className="m-auto flex gap-4 flex-col">
+        <div className="mt-4 mx-auto flex gap-4 flex-col">
           
             <div className="flex flex-col self-start p-2">
                 <h1 className="font-bold uppercase text-lg">TaskBoard</h1>
@@ -126,7 +126,7 @@ function KanbanBoard() {
 
             <div className="flex gap-4 flex-wrap flex-col md:flex-row md:flex-nowrap">
               <SortableContext items={columnsId}>
-                {columns.map((column, index) => (
+                {columns.map((column) => (
                     <ColumnContainer
                         key={column.id}
                         column={column}
@@ -136,7 +136,6 @@ function KanbanBoard() {
                         createTask={createTask}
                         deleteTask={deleteTask}
                         updateTask={updateTask}
-                        isFirstColumn={index === 0}
                     />
                 ))}
               </SortableContext>
@@ -157,7 +156,6 @@ function KanbanBoard() {
                 createTask={createTask}
                 deleteTask={deleteTask}
                 updateTask={updateTask}
-                isFirstColumn={false}
               /> 
             )}
             { activeTask && (
