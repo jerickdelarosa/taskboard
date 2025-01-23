@@ -9,10 +9,10 @@ Taskboard is a simple web app built with React and Vite that helps you manage ta
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 
 ## Demo
-You can check out the live demo of the app [here](#).
+You can check out the live demo of the app [https://jerickdelarosa.github.io/taskboard/](https://jerickdelarosa.github.io/taskboard/).
 
 ## Screenshots
-![Taskboard Screenshot](#)
+![alt text](https://github.com/jerickdelarosa/taskboard/blob/main/public/images/taskboard-img.png?raw=true)
 
 ## Installation
 
